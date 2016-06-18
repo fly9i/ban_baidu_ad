@@ -1,6 +1,6 @@
 {
   "name": "百度推广优化",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "manifest_version": 2,
   "description": "百度搜索结果页隐藏广告插件",
   "browser_action": {
