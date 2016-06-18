@@ -21,12 +21,11 @@
 		}
 
 	})
-
-	chrome.tabs.onUpdated.addListener(function(tabId, props) {
+	chrome.webNavigation.onCompleted.addListener(function(props) {
 		console.log(new Date().getTime()+":"+JSON.stringify(arguments))
-		if(props && props.status && props.status=='complete'){
-			console.log(tabId);
-			chrome.tabs.sendMessage(tabId,{"act":"go"}, function() {
+		if(props && props.tabId){
+			console.log(props.tabId);
+			chrome.tabs.sendMessage(props.tabId,{"act":"go"}, function() {
 			});
 		}
 	});

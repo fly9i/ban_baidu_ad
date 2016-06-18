@@ -11,7 +11,7 @@
   "permissions": [
     "notifications",
     "tabs",
-    "sessions",
+    "webNavigation",
     "storage",
     "http://www.baidu.com/s*",
     "https://www.baidu.com/s*"
