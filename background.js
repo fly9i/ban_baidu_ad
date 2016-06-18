@@ -21,5 +21,14 @@
 		}
 
 	})
-	
+
+	chrome.tabs.onUpdated.addListener(function(tabId, props) {
+		console.log(new Date().getTime()+":"+JSON.stringify(arguments))
+		if(props && props.status && props.status=='complete'){
+			console.log(tabId);
+			chrome.tabs.sendMessage(tabId,{"act":"go"}, function() {
+			});
+		}
+	});
 })();
+

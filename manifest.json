@@ -11,8 +11,10 @@
   "permissions": [
     "notifications",
     "tabs",
+    "sessions",
     "storage",
-    "http://www.baidu.com/s*"
+    "http://www.baidu.com/s*",
+    "https://www.baidu.com/s*"
   ],
   "background": {
     "page":"background.html",
@@ -20,7 +22,7 @@
   },
    "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["http://www.baidu.com/*","https://www.baidu.com/*"],
       "css": ["style.css"],
       "js": ["jquery-1.11.3.min.js", "content.js"]
     }
