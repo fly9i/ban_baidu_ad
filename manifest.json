@@ -1,0 +1,29 @@
+{
+  "name": "不再见，推广",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "百度搜索结果页隐藏广告插件",
+  "browser_action": {
+    "default_icon": "icon.png" ,
+    "default_title": "不再见，推广",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "notifications",
+    "tabs",
+    "storage",
+    "http://www.baidu.com/s*"
+  ],
+  "background": {
+    "page":"background.html",
+    "persistent": false
+  },
+   "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["style.css"],
+      "js": ["jquery-1.11.3.min.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources":["icons/iconfont.eot","icons/iconfont.woff","icons/iconfont.svg","icons/iconfont.ttf","setting.html"]
+}
