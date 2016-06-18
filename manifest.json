@@ -1,11 +1,11 @@
 {
-  "name": "不再见，推广",
+  "name": "百度推广优化",
   "version": "0.1.0",
   "manifest_version": 2,
   "description": "百度搜索结果页隐藏广告插件",
   "browser_action": {
     "default_icon": "icon.png" ,
-    "default_title": "不再见，推广",
+    "default_title": "百度推广优化",
     "default_popup": "popup.html"
   },
   "permissions": [
